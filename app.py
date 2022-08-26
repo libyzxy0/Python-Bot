@@ -539,14 +539,14 @@ class ChatBot(Client):
                             file_urls=unsent_msg, message=None, thread_id=thread_id, thread_type=ThreadType.GROUP)
                 else:
                     if(thread_type == ThreadType.USER):
-                        reply = f"You unsent this message : \n '{unsent_msg}'"
+                        reply = f"You unsent this message : \n {unsent_msg}"
                         self.send(Message(text=reply), thread_id=thread_id,
                                   thread_type=thread_type)
                     elif(thread_type == ThreadType.GROUP):
                         user = self.fetchUserInfo(f"{author_id}")[
                             f"{author_id}"]
                         username = user.name.split()[0]
-                        reply = f"{username} unsent this message : \n\n '{unsent_msg}'"
+                        reply = f"{username} unsent this message : \n\n {unsent_msg}"
                         self.send(Message(text=reply), thread_id=thread_id,
                                   thread_type=thread_type)
 
