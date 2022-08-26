@@ -1,0 +1,3 @@
+git+https://github.com/libyzxy0/demobot@main
+wolframalpha
+requests
