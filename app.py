@@ -151,7 +151,7 @@ class ChatBot(Client):
             print(f"humidity {humidity}")
             print(f"wind speed {wind_speed}m/s")
             return(
-                f"The current temperature of {city} is %.1f degree celcius with {description}" % celcius_res +" ")
+                f"The current temperature of {city} is %.1f degree celcius with {description}" % celcius_res +" 🚀")
 
         def stepWiseCalculus(query):
             query = query.replace("+", "%2B")
@@ -160,7 +160,7 @@ class ChatBot(Client):
                     api_address = f"https://api.wolframalpha.com/v2/query?appid=Y98QH3-24PWX83VGA&input={query}&podstate=Step-by-step%20solution&output=json&format=image"
                     json_data = requests.get(api_address).json()
                     answer = json_data["queryresult"]["pods"][0]["subpods"][1]["img"]["src"]
-                    answer = answer.replace("sqrt", "")
+                    answer = answer.replace("sqrt", "🚀")
 
                     if(thread_type == ThreadType.USER):
                         self.sendRemoteFiles(
@@ -174,7 +174,7 @@ class ChatBot(Client):
                     api_address = f"http://api.wolframalpha.com/v2/query?appid=Y98QH3-24PWX83VGA&input={query}&podstate=Result__Step-by-step+solution&format=plaintext&output=json"
                     json_data = requests.get(api_address).json()
                     answer = json_data["queryresult"]["pods"][0]["subpods"][0]["img"]["src"]
-                    answer = answer.replace("sqrt", "")
+                    answer = answer.replace("sqrt", "🚀")
 
                     if(thread_type == ThreadType.USER):
                         self.sendRemoteFiles(
@@ -186,7 +186,7 @@ class ChatBot(Client):
                 except:
                     try:
                         answer = json_data["queryresult"]["pods"][1]["subpods"][1]["img"]["src"]
-                        answer = answer.replace("sqrt", "")
+                        answer = answer.replace("sqrt", "🚀")
 
                         if(thread_type == ThreadType.USER):
                             self.sendRemoteFiles(
@@ -206,7 +206,7 @@ class ChatBot(Client):
             json_data = requests.get(api_address).json()
             try:
                 answer = json_data["queryresult"]["pods"][1]["subpods"][2]["plaintext"]
-                answer = answer.replace("sqrt", "")
+                answer = answer.replace("sqrt", "🚀")
 
                 self.send(Message(text=answer), thread_id=thread_id,
                           thread_type=thread_type)
@@ -215,7 +215,7 @@ class ChatBot(Client):
                 pass
             try:
                 answer = json_data["queryresult"]["pods"][1]["subpods"][3]["plaintext"]
-                answer = answer.replace("sqrt", "")
+                answer = answer.replace("sqrt", "🚀")
 
                 self.send(Message(text=answer), thread_id=thread_id,
                           thread_type=thread_type)
@@ -224,7 +224,7 @@ class ChatBot(Client):
                 pass
             try:
                 answer = json_data["queryresult"]["pods"][1]["subpods"][4]["plaintext"]
-                answer = answer.replace("sqrt", "")
+                answer = answer.replace("sqrt", "🚀")
 
                 self.send(Message(text=answer), thread_id=thread_id,
                           thread_type=thread_type)
@@ -233,7 +233,7 @@ class ChatBot(Client):
                 pass
             try:
                 answer = json_data["queryresult"]["pods"][1]["subpods"][1]["plaintext"]
-                answer = answer.replace("sqrt", "")
+                answer = answer.replace("sqrt", "🚀")
 
                 self.send(Message(text=answer), thread_id=thread_id,
                           thread_type=thread_type)
@@ -242,7 +242,7 @@ class ChatBot(Client):
                 pass
             try:
                 answer = json_data["queryresult"]["pods"][1]["subpods"][0]["plaintext"]
-                answer = answer.replace("sqrt", "")
+                answer = answer.replace("sqrt", "🚀")
 
                 self.send(Message(text=answer), thread_id=thread_id,
                           thread_type=thread_type)
@@ -257,7 +257,7 @@ class ChatBot(Client):
             try:
                 try:
                     answer = json_data["queryresult"]["pods"][0]["subpods"][0]["plaintext"]
-                    answer = answer.replace("sqrt", "")
+                    answer = answer.replace("sqrt", "🚀")
                     self.send(Message(text=answer), thread_id=thread_id,
                               thread_type=thread_type)
 
@@ -265,7 +265,7 @@ class ChatBot(Client):
                     pass
                 try:
                     answer = json_data["queryresult"]["pods"][1]["subpods"][0]["plaintext"]
-                    answer = answer.replace("sqrt", "")
+                    answer = answer.replace("sqrt", "🚀")
 
                     self.send(Message(text=answer), thread_id=thread_id,
                               thread_type=thread_type)
@@ -274,7 +274,7 @@ class ChatBot(Client):
                     pass
                 try:
                     answer = json_data["queryresult"]["pods"][1]["subpods"][1]["plaintext"]
-                    answer = answer.replace("sqrt", "")
+                    answer = answer.replace("sqrt", "🚀")
 
                     self.send(Message(text=answer), thread_id=thread_id,
                               thread_type=thread_type)
@@ -325,7 +325,6 @@ class ChatBot(Client):
             print(json_response)
             return json_response[0]["translations"][0]["text"]
         
-        
         def bible():
         	import random
         	from modules.words import bible
@@ -348,22 +347,20 @@ class ChatBot(Client):
         	reply = f"{a}"
         	self.send(Message(text=reply), thread_id=thread_id,
                   thread_type=thread_type)
-                  
-                  
         def help_page_1():
-        	help_1 = f"<====>Command List<====>\n\n\n {prefix}Find img (Query)\n\n {prefix}Find covid (Country)\n\n {prefix}Find user (Username)\n\n {prefix}Weather of (City)\n\n {prefix}Translate (Msg) to (Lg) \n\n {prefix}Generate (Query)\n\n {prefix}Calc (Math)\n\n {prefix}Bible ()\n\n {prefix}Advice ()\n\n {prefix}Jokes ()\n\n {prefix}Test ()\n\n {prefix}{character} (Msg)\n\n\n\nPage(1|3)»\n\n\nBot : {botName}"
+        	help_1 = f"<====>Command List<====>\n\n\n• {prefix}Find img (Query)\n\n• {prefix}Find covid (Country)\n\n• {prefix}Find user (Username)\n\n• {prefix}Weather of (City)\n\n• {prefix}Translate (Msg) to (Lg) \n\n• {prefix}Generate (Query)\n\n• {prefix}Calc (Math)\n\n• {prefix}Bible (🚀)\n\n• {prefix}Advice (🚀)\n\n• {prefix}Jokes (🚀)\n\n• {prefix}Test (🚀)\n\n• {prefix}{character} (Msg)\n\n\n\nPage(1|3)»\n\n\nBot : {botName}"
         	a = help_1
         	reply = f"{a}"
         	self.send(Message(text=reply), thread_id=thread_id,
                   thread_type=thread_type)
         def help_page_2():
-        	help_2 = f"<====>Command List<====>\n\n\n {prefix}Find img (Query)\n\n {prefix}Find covid (Country)\n\n {prefix}Find user (Username)\n\n {prefix}Weather of (City)\n\n {prefix}Translate (Msg) to (Lg) \n\n {prefix}Generate (Query)\n\n {prefix}Calc (Math)\n\n {prefix}Bible ()\n\n {prefix}Advice ()\n\n {prefix}Jokes ()\n\n {prefix}Test ()\n\n {prefix}{character} (Msg)\n\n\n\nPage«(2|3)»\n\n\nBot : {botName}"
+        	help_2 = f"<====>Command List<====>\n\n\n• {prefix}Find img (Query)\n\n• {prefix}Find covid (Country)\n\n• {prefix}Find user (Username)\n\n• {prefix}Weather of (City)\n\n• {prefix}Translate (Msg) to (Lg) \n\n• {prefix}Generate (Query)\n\n• {prefix}Calc (Math)\n\n• {prefix}Bible (🚀)\n\n• {prefix}Advice (🚀)\n\n• {prefix}Jokes (🚀)\n\n• {prefix}Test (🚀)\n\n• {prefix}{character} (Msg)\n\n\n\nPage«(2|3)»\n\n\nBot : {botName}🚀"
         	a = help_2
         	reply = f"{a}"
         	self.send(Message(text=reply), thread_id=thread_id,
                   thread_type=thread_type)
         def help_page_3():
-        	help_3 = f"<====>Command List<====>\n\n\n {prefix}Find img (Query)\n\n {prefix}Find covid (Country)\n\n {prefix}Find user (Username)\n\n {prefix}Weather of (City)\n\n {prefix}Translate (Msg) to (Lg) \n\n {prefix}Generate (Query)\n\n {prefix}Calc (Math)\n\n {prefix}Bible ()\n\n {prefix}Advice ()\n\n {prefix}Jokes ()\n\n {prefix}Test ()\n\n {prefix}{character} (Msg)\n\n\n\nPage«(3|3)\n\n\nBot : {botName}"
+        	help_3 = f"<====>Command List<====>\n\n\n• {prefix}Find img (Query)\n\n• {prefix}Find covid (Country)\n\n• {prefix}Find user (Username)\n\n• {prefix}Weather of (City)\n\n• {prefix}Translate (Msg) to (Lg) \n\n• {prefix}Generate (Query)\n\n• {prefix}Calc (Math)\n\n• {prefix}Bible (🚀)\n\n• {prefix}Advice (🚀)\n\n• {prefix}Jokes (🚀)\n\n• {prefix}Test (🚀)\n\n• {prefix}{character} (Msg)\n\n\n\nPage«(3|3)\n\n\nBot : {botName}🚀"
         	a = help_3
         	reply = f"{a}"
         	self.send(Message(text=reply), thread_id=thread_id,
@@ -371,7 +368,7 @@ class ChatBot(Client):
                     
         def iLoveYou():
         	for i in range(101):
-        		reply = f"I love you {i} "
+        		reply = f"I love you {i} 🚀"
         		self.send(Message(text=reply), thread_id=thread_id,
                   thread_type=thread_type)
 	               
@@ -456,7 +453,7 @@ class ChatBot(Client):
                 query = msg.split()[1:]
                 res = client.query(' '.join(query))
                 answer = next(res.results).text
-                reply = f'{answer.replace("sqrt", "")}'
+                reply = f'{answer.replace("sqrt", "🚀")}'
                 sendQuery()
 
             elif (f"{prefix}find user" in msg):
@@ -467,7 +464,7 @@ class ChatBot(Client):
                 sendMsg() 
 
             elif (f"{prefix}{character} i love you" in msg):
-                reply = "I love you too"
+                reply = "I love you too🚀"
                 sendMsg() 
                 
             elif (msg == prefix):
@@ -539,14 +536,14 @@ class ChatBot(Client):
                             file_urls=unsent_msg, message=None, thread_id=thread_id, thread_type=ThreadType.GROUP)
                 else:
                     if(thread_type == ThreadType.USER):
-                        reply = f"You unsent this message : \n {unsent_msg}"
+                        reply = f"You unsent this message : \n '{unsent_msg}'"
                         self.send(Message(text=reply), thread_id=thread_id,
                                   thread_type=thread_type)
                     elif(thread_type == ThreadType.GROUP):
                         user = self.fetchUserInfo(f"{author_id}")[
                             f"{author_id}"]
                         username = user.name.split()[0]
-                        reply = f"{username} unsent this message : \n\n {unsent_msg}"
+                        reply = f"{username} unsent this message : \n\n '{unsent_msg}'"
                         self.send(Message(text=reply), thread_id=thread_id,
                                   thread_type=thread_type)
 
