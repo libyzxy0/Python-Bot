@@ -325,6 +325,7 @@ class ChatBot(Client):
             print(json_response)
             return json_response[0]["translations"][0]["text"]
         
+        
         def bible():
         	import random
         	from modules.words import bible
@@ -347,6 +348,8 @@ class ChatBot(Client):
         	reply = f"{a}"
         	self.send(Message(text=reply), thread_id=thread_id,
                   thread_type=thread_type)
+                  
+                  
         def help_page_1():
         	help_1 = f"<====>Command List<====>\n\n\n {prefix}Find img (Query)\n\n {prefix}Find covid (Country)\n\n {prefix}Find user (Username)\n\n {prefix}Weather of (City)\n\n {prefix}Translate (Msg) to (Lg) \n\n {prefix}Generate (Query)\n\n {prefix}Calc (Math)\n\n {prefix}Bible ()\n\n {prefix}Advice ()\n\n {prefix}Jokes ()\n\n {prefix}Test ()\n\n {prefix}{character} (Msg)\n\n\n\nPage(1|3)»\n\n\nBot : {botName}"
         	a = help_1
