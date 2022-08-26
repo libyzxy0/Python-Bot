@@ -12,7 +12,7 @@
 
 
 
-#     https://github.com/libyzxy0/MessengerBot/blob/main/LICENSE
+#     https://github.com/libyzxy0/Smiley/blob/main/LICENSE
 
 
 
@@ -348,19 +348,19 @@ class ChatBot(Client):
         	self.send(Message(text=reply), thread_id=thread_id,
                   thread_type=thread_type)
         def help_page_1():
-        	help_1 = f"<====>Command List<====>\n\n\n• {prefix}Find img (Query)\n\n• {prefix}Find covid (Country)\n\n• {prefix}Find user (Username)\n\n• {prefix}Weather of (City)\n\n• {prefix}Translate (Msg) to (Lg) \n\n• {prefix}Generate (Query)\n\n• {prefix}Calc (Math)\n\n• {prefix}Bible ()\n\n• {prefix}Advice ()\n\n• {prefix}Jokes ()\n\n• {prefix}Test ()\n\n• {prefix}{character} (Msg)\n\n\n\nPage(1|3)»\n\n\nBot : {botName}"
+        	help_1 = f"<====>Command List<====>\n\n\nÂ• {prefix}Find img (Query)\n\nÂ• {prefix}Find covid (Country)\n\nÂ• {prefix}Find user (Username)\n\nÂ• {prefix}Weather of (City)\n\nÂ• {prefix}Translate (Msg) to (Lg) \n\nÂ• {prefix}Generate (Query)\n\nÂ• {prefix}Calc (Math)\n\nÂ• {prefix}Bible ()\n\nÂ• {prefix}Advice ()\n\nÂ• {prefix}Jokes ()\n\nÂ• {prefix}Test ()\n\nÂ• {prefix}{character} (Msg)\n\n\n\nPage(1|3)Â»\n\n\nBot : {botName}"
         	a = help_1
         	reply = f"{a}"
         	self.send(Message(text=reply), thread_id=thread_id,
                   thread_type=thread_type)
         def help_page_2():
-        	help_2 = f"<====>Command List<====>\n\n\n• {prefix}Find img (Query)\n\n• {prefix}Find covid (Country)\n\n• {prefix}Find user (Username)\n\n• {prefix}Weather of (City)\n\n• {prefix}Translate (Msg) to (Lg) \n\n• {prefix}Generate (Query)\n\n• {prefix}Calc (Math)\n\n• {prefix}Bible ()\n\n• {prefix}Advice ()\n\n• {prefix}Jokes ()\n\n• {prefix}Test ()\n\n• {prefix}{character} (Msg)\n\n\n\nPage«(2|3)»\n\n\nBot : {botName}"
+        	help_2 = f"<====>Command List<====>\n\n\nÂ• {prefix}Find img (Query)\n\nÂ• {prefix}Find covid (Country)\n\nÂ• {prefix}Find user (Username)\n\nÂ• {prefix}Weather of (City)\n\nÂ• {prefix}Translate (Msg) to (Lg) \n\nÂ• {prefix}Generate (Query)\n\nÂ• {prefix}Calc (Math)\n\nÂ• {prefix}Bible ()\n\nÂ• {prefix}Advice ()\n\nÂ• {prefix}Jokes ()\n\nÂ• {prefix}Test ()\n\nÂ• {prefix}{character} (Msg)\n\n\n\nPageÂ«(2|3)Â»\n\n\nBot : {botName}"
         	a = help_2
         	reply = f"{a}"
         	self.send(Message(text=reply), thread_id=thread_id,
                   thread_type=thread_type)
         def help_page_3():
-        	help_3 = f"<====>Command List<====>\n\n\n• {prefix}Find img (Query)\n\n• {prefix}Find covid (Country)\n\n• {prefix}Find user (Username)\n\n• {prefix}Weather of (City)\n\n• {prefix}Translate (Msg) to (Lg) \n\n• {prefix}Generate (Query)\n\n• {prefix}Calc (Math)\n\n• {prefix}Bible ()\n\n• {prefix}Advice ()\n\n• {prefix}Jokes ()\n\n• {prefix}Test ()\n\n• {prefix}{character} (Msg)\n\n\n\nPage«(3|3)\n\n\nBot : {botName}"
+        	help_3 = f"<====>Command List<====>\n\n\nÂ• {prefix}Find img (Query)\n\nÂ• {prefix}Find covid (Country)\n\nÂ• {prefix}Find user (Username)\n\nÂ• {prefix}Weather of (City)\n\nÂ• {prefix}Translate (Msg) to (Lg) \n\nÂ• {prefix}Generate (Query)\n\nÂ• {prefix}Calc (Math)\n\nÂ• {prefix}Bible ()\n\nÂ• {prefix}Advice ()\n\nÂ• {prefix}Jokes ()\n\nÂ• {prefix}Test ()\n\nÂ• {prefix}{character} (Msg)\n\n\n\nPageÂ«(3|3)\n\n\nBot : {botName}"
         	a = help_3
         	reply = f"{a}"
         	self.send(Message(text=reply), thread_id=thread_id,
