@@ -375,11 +375,10 @@ class ChatBot(Client):
         def badWord():
         	import random
         	replies = ["Watch your mouth!", "Don't be rude!", "Don't say that, that's bad!"]
-        	a = random.choice(replies)
-        	reply = f"{a}"
+        	badWordR = random.choice(replies)
+        	reply = f"{badWordR}"
         	self.send(Message(text=reply), thread_id=thread_id,
                   thread_type=thread_type)
-	    
 	    
         def imageSearch(self, msg):
             try:
