@@ -371,15 +371,7 @@ class ChatBot(Client):
         		reply = f"I love you {i} 🚀"
         		self.send(Message(text=reply), thread_id=thread_id,
                   thread_type=thread_type)
-                  
-        def badWord():
-        	import random
-        	replies = ["Watch your mouth!", "Don't be rude!", "Don't say that, that's bad!"]
-        	badWordR = random.choice(replies)
-        	reply = f"{badWordR}"
-        	self.send(Message(text=reply), thread_id=thread_id,
-                  thread_type=thread_type)
-	    
+	               
         def imageSearch(self, msg):
             try:
                 count = int(msg.split()[-1])
@@ -426,8 +418,6 @@ class ChatBot(Client):
                 
                 global prefix, character, botName
                 
-                #Imports
-                from modules.badWords import badWordsList
         try:
             if(f"{prefix}find img" in msg):
                 imageSearch(self, msg)
@@ -436,25 +426,19 @@ class ChatBot(Client):
                 reply = translator(self, msg, msg.split()[-1])
                 print(reply)
                 sendQuery()
-                
             elif(f"{prefix}weather of" in msg):
                 indx = msg.index("weather of")
                 query = msg[indx+11:]
                 reply = weather(query)
                 sendQuery()
-                
             elif(f"{prefix}find covid" in msg):
                 corona_details(msg.split()[2])
-                
             elif ("calculus" in msg):
                 stepWiseCalculus(" ".join(msg.split(" ")[1:]))
-                
             elif ("algebra" in msg):
                 stepWiseAlgebra(" ".join(msg.split(" ")[1:]))
-                
             elif ("query" in msg):
                 stepWiseQueries(" ".join(msg.split(" ")[1:]))
-                
             elif(f"{prefix}bible" in msg):
               bible()
             elif(f"{prefix}jokes" in msg):
@@ -463,9 +447,6 @@ class ChatBot(Client):
               advice()
             elif(f"{prefix}test" in msg):
               iLoveYou()
-            elif(msg in badWordsList):
-            	badWord()
-            	
             elif(f"{prefix}solve" in msg or f"{prefix}generate" in msg or f"{prefix}calc" in msg):
                 app_id = "Y98QH3-24PWX83VGA"
                 client = wolframalpha.Client(app_id)
