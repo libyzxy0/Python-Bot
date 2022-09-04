@@ -327,7 +327,7 @@ class ChatBot(Client):
         
         def bible():
         	import random
-        	from modules.words import bible
+        	from modules.randomWords import bible
         	a = random.choice(bible)
         	reply = f"{a}"
         	self.send(Message(text=reply), thread_id=thread_id,
@@ -335,14 +335,14 @@ class ChatBot(Client):
                   
         def jokes():
         	import random
-        	from modules.words import jokes
+        	from modules.randomWords import jokes
         	a = random.choice(jokes)
         	reply = f"{a}"
         	self.send(Message(text=reply), thread_id=thread_id,
                   thread_type=thread_type)
         def advice():
         	import random
-        	from modules.words import advice
+        	from modules.randomWords import advice
         	a = random.choice(advice)
         	reply = f"{a}"
         	self.send(Message(text=reply), thread_id=thread_id,
