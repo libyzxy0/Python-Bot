@@ -567,11 +567,11 @@ class ChatBot(Client):
                   thread_type=thread_type)
 
 cookies = {
-    "sb": "qfsGY180yQ4tLNg1wsXVj2-i",
-    "fr": "00nisAOc345AvzOf7.AWWKbjRSyh6RO4LvYSxeZTJWj50.BjBvup.-1.AAA.0.0.BjBvvA.AWW1P8PyAig",
+    "sb": "bfKgY6qJ0pelnj3xX1JE4wBt",
+    "fr": "0HQB238NUM3lL1rhq.AWUOiQtaw_S4qnpXzUNlP7gltOg.BjoPJt.4T.AAA.0.0.BjoPJ4.AWX9ay8i-eg",
     "c_user": "100084389502600",
-    "datr": "qfsGYwoHniN3cOUVAuOZGU9_",
-    "xs": "8%3AFL54kojn7RtOmA%3A2%3A1661415797%3A-1%3A9829" 
+    "datr": "bfKgYxuiuqGjmWIMZMoLhj91",
+    "xs": "7%3A0aKVkwk7uHMbxw%3A2%3A1671492217%3A-1%3A16278" 
 }
 
 client=ChatBot("",
